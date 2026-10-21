@@ -1,0 +1,5 @@
+{
+  "name": "orch",
+  "owner": { "name": "jpdiv" },
+  "plugins": [ { "name": "orch", "description": "Orchestrator + executor workflow skills.", "source": "./", "category": "productivity" } ]
+}
