@@ -1,6 +1,6 @@
 # orch — orchestrator + executor skills for Claude Code
 
-Claude (Opus) is the brain: brainstorms, plans, reviews. A cheap executor (default: hermes + deepseek) is the hands:
+Claude (Opus) is the brain: brainstorms, plans, reviews. A cheap executor is the hands — in T3 Code a visible subagent thread with a fallback ladder (`executors:`), elsewhere the hermes script:
 writes code in its own git worktree from an IMPL prompt, Claude reviews the diff and ff-merges.
 
 | skill | does |

@@ -6,7 +6,12 @@ main_branch: main            # [main]
 gate: ./scripts/test.sh      # command that must be green before merge (no default — ask the owner if missing)
 worktree_dir: ../.wt         # [../.wt] where executor worktrees go; <dir>/<repo>-h-<name>
 link_dirs:                   # comma list of paths inside the repo to symlink into each worktree (node_modules)
-executor: hermes -z "$PROMPT" --in "$WT" --usage-file "$USAGE"   # run via bash; env PROMPT, WT, USAGE are set
+executors:                   # T3 fallback ladder, top first: providerInstanceId model [option=value]
+  - pi opencode-go/deepseek-v4.1-flash
+  - opencode opencode/deepseek-v4.1-flash-free
+  - antigravity gemini-3.8-flash
+  - codex gpt-6.1-terra
+executor: hermes -z "$PROMPT" --in "$WT" --usage-file "$USAGE"   # outside T3 only; run via bash; env PROMPT, WT, USAGE are set
 
 chat_language: Russian       # [owner's language] language of chat with the owner
 file_language: English       # [English] language of every file, prompt and subagent brief

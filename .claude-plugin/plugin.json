@@ -1,5 +1,5 @@
 {
   "name": "orch",
   "version": "0.1.0",
-  "description": "Opus as orchestrator (plan, review), a cheap executor (hermes + deepseek) as the hands: /orch:plan, /orch:delegate, /orch:entropy."
+  "description": "Opus as orchestrator (plan, review), a cheap executor (T3 subagent ladder or hermes) as the hands: /orch:plan, /orch:delegate, /orch:entropy."
 }
