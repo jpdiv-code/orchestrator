@@ -14,6 +14,9 @@ Fit the process to the task; skipping an empty section is fine.
   Questions in a numbered batch, so the owner can answer "1. yes 2. B".
 - Record the owner's decisions immediately in the "Decisions" table — meaning, in `file_language`, dated when it matters.
   "Deferred by owner" is a decision too — record it (otherwise we re-discuss it in a week).
+- Record computer-use authorization separately: without an explicit opt-in when approving this plan/work, pause for
+  owner confirmation before GUI checks. Autonomy alone is not an opt-in. Prefer a Luna subagent for an approved pass;
+  carry its scope into the IMPL (see `/orch:delegate`, "Computer-use verification").
 - Facts about code/prod — verify, don't recall. If a decision needs code knowledge — that's recon, below.
 
 ## File `<plans_dir>/PLAN-<date>-<TOPIC>.md` — in `file_language`
