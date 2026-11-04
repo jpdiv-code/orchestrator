@@ -2,6 +2,8 @@
 
 Claude (Opus) is the brain: brainstorms, plans, reviews. A cheap executor is the hands — in T3 Code a visible subagent thread with a fallback ladder (`executors:`), elsewhere the hermes script:
 writes code in its own git worktree from an IMPL prompt, Claude reviews the diff and ff-merges.
+Ordinary fix rounds continue the original executor's thread and checkout where the host permits; the orchestrator
+still reviews independently. Use a fresh executor context when the old one is unavailable, unwieldy or stuck.
 
 | skill | does |
 |---|---|
