@@ -62,21 +62,6 @@ mechanism when available; otherwise send the fix IMPL as a fresh context. Do not
 Different `<name>`s may run in parallel. While waiting, keep talking with the owner.
 
 ## 3. Review (after the notification)
-
-### Computer-use verification
-
-Before launching an app for GUI verification or starting computer-use checks, pause and obtain the owner's
-confirmation. General approval of a plan, autonomous execution, tests or parallel work does not authorize computer
-use. Skip this extra confirmation only when the owner explicitly included these checks when approving the plan/work,
-or explicitly approves the current check later. Record that scope in the PLAN/IMPL; do not ask again for every action
-within an approved check.
-
-Prefer a **Luna subagent** for approved computer-use verification, using the environment's supported computer-use
-skill/tools. Keep implementation and independent code review separate from that UI pass. If Luna or its computer-use
-tools are unavailable, disclose that and agree on an alternative rather than silently doing the pass yourself.
-Worker briefs must say whether GUI checks are authorized; otherwise keep workers headless. Code review and headless
-gates may continue while confirmation is pending. Report only GUI cases actually driven.
-
 1. T3: save the child's final message to `IMPL-<step>.report.md`; take `<worktree>` from its last lines.
    Script: read `IMPL-<step>.report.md`; if empty / rc≠0 — read `.log`.
 2. `git -C <worktree> log --oneline <main>..HEAD` and `diff <main>...HEAD` — read the whole diff and check it against
